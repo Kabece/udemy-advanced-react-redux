@@ -7,7 +7,7 @@ const requireSigning = passport.authenticate("local", { session: false });
 
 module.exports = function(app) {
   app.get("/", requireAuth, function(req, res) {
-    res.send({ hi: "there" });
+    res.send({ message: "ABC123" });
   });
   app.post("/signin", requireSigning, Authentication.signin);
   app.post("/signup", Authentication.signup);
